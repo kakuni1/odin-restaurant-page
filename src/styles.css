@@ -1,0 +1,143 @@
+/* START CSS RESET */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+}
+
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+/* END CSS RESET */
+
+body {
+    height: 100%;
+    overflow: clip;
+    background-color: #f6f5ee;
+}
+
+@font-face {
+    font-family: "YuseiMagic";
+    src: url("./fonts/YuseiMagic-Regular.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Bitcount";
+    src: url("./fonts/BitcountGridDouble_Roman-Regular.ttf") format("truetype");
+}
+
+#nav-menu {
+    display: flex;
+    justify-content: space-between;
+}
+
+#logo-name {
+    font-family: "Bitcount";
+    padding-top: 2.5px;
+    padding-left: 5px;
+    color: #0d0d0c;
+}
+
+#hamburger-icon {
+    padding-right: 5px;
+}
+
+#nav-menu ul {
+    display: flex;
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.item-tab a {
+    display: block;
+    color: inherit;
+    padding: 2.5px 15px 5px 15px;
+    text-decoration: none;
+    font-family: "YuseiMagic";
+    font-size: 0.95rem;
+}
+
+#tab-home,
+#tab-menu,
+#tab-about {
+    color: #3e3c38;
+}
+
+#tab-home:hover {
+    color: #7e8faf;
+}
+
+#tab-menu:hover {
+    color: #c27672;
+}
+
+#tab-about:hover {
+    color: #a7956a;
+}
+
+#image-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+#image-container #main-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#main-card {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding-top: 2.5px;
+    border-radius: 5px;
+    opacity: 0.9;
+    width: 132.5px;
+    height: 47.5px;
+    background-color: #f3f3f2;
+    font-family: "Bitcount";
+    font-size: 1.65rem;
+    box-shadow:
+        rgba(0, 0, 0, 0.4) 0px 2px 4px,
+        rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
+        rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
