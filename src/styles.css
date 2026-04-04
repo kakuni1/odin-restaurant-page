@@ -121,7 +121,9 @@ body {
 }
 
 #card-logo,
-#card-cafe {
+#card-cafe,
+#card-menu,
+#card-about {
     position: absolute;
     display: flex;
     justify-content: center;
@@ -146,7 +148,9 @@ body {
     height: 47.5px;
 }
 
-#card-cafe {
+#card-cafe,
+#card-menu,
+#card-about {
     left: 50%;
     top: 5.5%;
     transform: translate(-50%, 50%);
@@ -154,8 +158,28 @@ body {
     height: 516px;
 }
 
-#image-cafe {
+#image-cafe,
+#menu {
     box-shadow:
         rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
         rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+}
+
+#menu {
+    width: 100%;
+    height: calc(100% - 25px);
+    margin: 10px 15px;
+    padding: 10px 15px;
+}
+
+#menu > li {
+    font-size: 1.33rem;
+}
+
+ul {
+    padding-left: 0;
+}
+
+li {
+    list-style: none;
 }

@@ -1,4 +1,4 @@
-import { container } from "./background.js";
+import { content, container } from "./background.js";
 import fileCafe from "../images/pexels-joao-mira-2150881975-31413759_web.webp";
 
 // text for logo
