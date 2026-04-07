@@ -1,10 +1,10 @@
-import { container } from "./background.js";
+export function createCardAbout() {
+    const cardAbout = document.createElement("div");
+    const text = document.createElement("p");
 
-const cardAbout = document.createElement("div");
-const text = document.createElement("p");
-cardAbout.id = "card-menu";
-text.textContent = "about";
-cardAbout.appendChild(text);
-container.appendChild(cardAbout);
+    cardAbout.id = "card-about";
+    text.textContent = "about";
+    cardAbout.appendChild(text);
 
-export { cardAbout };
+    return cardAbout;
+}

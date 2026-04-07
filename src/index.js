@@ -1,32 +1,38 @@
-import { container, cardCafe } from "./load/tab-home.js";
-import { cardMenu } from "./load/tab-menu.js";
-import { cardAbout } from "./load/tab-about.js";
-
+import { setupBackground } from "./load/background.js";
+import { createCardCafe } from "./load/tab-home.js";
+import { createCardMenu } from "./load/tab-menu.js";
+import { createCardAbout } from "./load/tab-about.js";
 import "./styles.css";
 
 (function mouseEvent() {
+    let container = setupBackground();
+    const { cardLogo, cardCafe } = createCardCafe();
+    container.appendChild(cardLogo);
+    container.appendChild(cardCafe);
+
     const home = document.getElementById("tab-home");
     const menu = document.getElementById("tab-menu");
     const about = document.getElementById("tab-about");
 
     home.addEventListener("click", () => {
-        if (cardCafe.parentNode === container) container.removeChild(cardCafe);
-        if (cardMenu.parentNode === container) container.removeChild(cardMenu);
-        if (cardAbout.parentNode === container) container.removeChild(cardAbout);
+        document.getElementById("image-container").remove();
+        container = setupBackground();
+        const { cardLogo, cardCafe } = createCardCafe();
+        container.appendChild(cardLogo);
         container.appendChild(cardCafe);
     });
 
     menu.addEventListener("click", () => {
-        if (cardCafe.parentNode === container) container.removeChild(cardCafe);
-        if (cardMenu.parentNode === container) container.removeChild(cardMenu);
-        if (cardAbout.parentNode === container) container.removeChild(cardAbout);
+        document.getElementById("image-container").remove();
+        container = setupBackground();
+        const cardMenu = createCardMenu();
         container.appendChild(cardMenu);
     });
 
     about.addEventListener("click", () => {
-        if (cardCafe.parentNode === container) container.removeChild(cardCafe);
-        if (cardMenu.parentNode === container) container.removeChild(cardMenu);
-        if (cardAbout.parentNode === container) container.removeChild(cardAbout);
+        document.getElementById("image-container").remove();
+        container = setupBackground();
+        const cardAbout = createCardAbout();
         container.appendChild(cardAbout);
     });
 })();

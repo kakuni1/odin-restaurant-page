@@ -50,11 +50,6 @@ body {
 }
 
 @font-face {
-    font-family: "YuseiMagic";
-    src: url("./fonts/YuseiMagic-Regular.ttf") format("truetype");
-}
-
-@font-face {
     font-family: "Bitcount";
     src: url("./fonts/BitcountGridDouble_Roman-Regular.ttf") format("truetype");
 }
