@@ -26,6 +26,7 @@ import "./styles.css";
         document.getElementById("image-container").remove();
         container = setupBackground();
         const cardMenu = createCardMenu();
+        container.appendChild(cardLogo);
         container.appendChild(cardMenu);
     });
 
@@ -33,6 +34,7 @@ import "./styles.css";
         document.getElementById("image-container").remove();
         container = setupBackground();
         const cardAbout = createCardAbout();
+        container.appendChild(cardLogo);
         container.appendChild(cardAbout);
     });
 })();
